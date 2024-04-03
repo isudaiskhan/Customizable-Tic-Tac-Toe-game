@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(135deg, #8052ec, #d161ff);
+}
+
+.container {
+    text-align: center;
+}
+
+.game {
+    margin-bottom: 20px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+/*     background-color: #eee; */
+    padding: 10px;
+    margin-top: 20px;
+    border: none; /* Remove border from the entire game board */
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    cursor: pointer;
+    background-color: #fff;
+  border-radius: 10px; /* Add border radius for rounded corners */
+ border: 1px solid #ccc; 
+    box-sizing: border-box; /* Include border in cell size */
+    transition: background-color 0.3s ease; /* Add transition effect */
+}
+
+.cell:hover {
+    background-color: #f0f0f0;
+}
+
+
+.status {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  color: white;
+  margin-top: 20px;
+}
+
+.restartBtn {
+   padding: 15px 20px;
+   font-size: 1em;
+   background-color: black;
+   color:white;
+   border:none;
+   border-radius: 5px; /* Add border radius for rounded corners */
+   cursor: pointer;
+
+}
+
+.resultScreen {
+    display: none;
+    position: fixed;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the modal */
+    background-image: linear-gradient(to right, #69FFA5, #00F260);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow */
+}
+
+
+.resultMessage {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.newGameBtn {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
